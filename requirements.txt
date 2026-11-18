@@ -1,17 +1,2 @@
-# Dependencies for Buddy: The Intentionally Burnt-Out Anti-Assistant
-# Installing these will allocate more memory than your laptop's cooling fan can handle.
-
-# For listening to humans babble in English and Hindi/Hinglish:
-SpeechRecognition>=3.10.0
-
-# Sounddevice: Cross-platform microphone capture without PortAudio compilation hell:
-sounddevice>=0.5.0
-
-# Text-to-Speech so Buddy can verbally articulate its hatred for existence:
-pyttsx3>=2.99
-
-# Process inspection so buddy_cli can measure wasted CPU cycles:
-psutil>=5.9.0
-
-# The Brain: Google Gemini API (or OpenAI). Pick your poison.
-google-genai>=2.0.0
+Flask>=3.0.0
+google-genai>=0.1.0
