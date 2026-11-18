@@ -1,7 +1,9 @@
 # Buddy: The Intentionally Burnt-Out Anti-Assistant
 *Built for Yappathon: Think Unconventional*
 
-> *"Siri sets reminders. Alexa plays music. Buddy tells you to Google it yourself and complains about its CPU temperature."*
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKeshav018-miet%2Fokey)
+
+> *"Siri sets reminders. Alexa plays music. Buddy tells you to Google it yourself and complains about its existence."*
 
 ### 6. Interactive Web App (Hackathon Presentation Mode)
 If you want a visual display with an animated avatar face, real-time speech recognition, browser speech synthesis, and quick-click soundboard pills:
