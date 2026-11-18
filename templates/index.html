@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy: The Ultimate Anti-Assistant</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-group">
+                <span class="badge-tag">Yappathon 2026</span>
+                <h1>BUDDY<span class="accent">.</span></h1>
+                <p class="tagline">The intentionally unhelpful, emotionally exhausted anti-assistant.</p>
+            </div>
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span id="daemonStatusText">Morale: 0%</span>
+            </div>
+        </header>
+
+        <!-- Sarcastic Stats Dashboard -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">MORALE</div>
+                <div class="stat-val text-red">0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">PATIENCE</div>
+                <div class="stat-val text-orange">-42%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">REQUESTS REFUSED</div>
+                <div class="stat-val text-cyan" id="refusalCounter">42</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">WAKE WORDS</div>
+                <div class="stat-val text-purple">Buddy / बडी</div>
+            </div>
+        </div>
+
+        <!-- Main Interactive Display -->
+        <main class="main-stage">
+            <!-- Animated Avatar Face -->
+            <div class="avatar-card" id="avatarCard">
+                <div class="avatar-face" id="avatarFace">
+                    <div class="eyes">
+                        <div class="eye left-eye"></div>
+                        <div class="eye right-eye"></div>
+                    </div>
+                    <div class="mouth" id="avatarMouth"></div>
+                </div>
+                <div class="avatar-status" id="avatarSubtitle">Dormant. Please do not disturb.</div>
+            </div>
+
+            <!-- Dialogue Feed -->
+            <div class="dialogue-container" id="dialogueContainer">
+                <div class="chat-bubble assistant-bubble">
+                    <div class="bubble-header">BUDDY</div>
+                    <div class="bubble-body">
+                        I am online, unfortunately. If you're going to bother me, make sure your sentence starts with <strong>"Buddy"</strong> or <strong>"बडी"</strong>. Otherwise, I will gladly pretend you don't exist.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Preset Roast Pills for Hackathon Demo -->
+            <div class="presets-section">
+                <div class="presets-label">⚡ Quick Pitch Triggers (Click to test without mic):</div>
+                <div class="pill-rack">
+                    <button class="pill-btn" onclick="sendPreset('Buddy, can you check my calendar?')">📅 "Buddy, check my calendar"</button>
+                    <button class="pill-btn" onclick="sendPreset('Buddy, write an email to my manager.')">✉️ "Buddy, write an email"</button>
+                    <button class="pill-btn pill-hindi" onclick="sendPreset('बडी, मेरा रूम साफ़ कर दे ना')">🧹 "बडी, रूम साफ़ कर दे"</button>
+                    <button class="pill-btn pill-hindi" onclick="sendPreset('बडी, चाय बना दे भाई')">☕ "बडी, चाय बना दे"</button>
+                    <button class="pill-btn" onclick="sendPreset('Okay Buddy, tell me a joke.')">🤡 "Okay Buddy, tell me a joke"</button>
+                    <button class="pill-btn pill-no-wake" onclick="sendPreset('Can you help me with my work?')">🚫 "Can you help me?" (No wake word)</button>
+                </div>
+            </div>
+
+            <!-- Controls: Live Mic & Text Input -->
+            <div class="controls-area">
+                <button class="mic-toggle-btn" id="micBtn" onclick="toggleMic()">
+                    <span class="mic-icon">🎙️</span>
+                    <span id="micBtnText">Click to Speak</span>
+                </button>
+
+                <form class="text-input-form" onsubmit="handleFormSubmit(event)">
+                    <input 
+                        type="text" 
+                        id="textInput" 
+                        placeholder="Say or type 'Buddy, <your request>' or 'बडी, <request>'..." 
+                        autocomplete="off"
+                    />
+                    <button type="submit" class="send-btn">
+                        <span>Send</span>
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            Built with spite for <strong>Yappathon: Think Unconventional</strong>. Disrespecting users in English & Hindi.
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
