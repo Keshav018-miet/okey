@@ -103,8 +103,9 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/api/chat", methods=["POST"])
-@app.route("/api/index/api/chat", methods=["POST"])
+@app.route("/api/chat", methods=["POST", "GET"])
+@app.route("/chat", methods=["POST", "GET"])
+@app.route("/api/index/api/chat", methods=["POST", "GET"])
 def chat():
     global refusal_counter
     data = request.get_json(force=True) if request.is_json else request.form
@@ -160,6 +161,7 @@ def chat():
 
 
 @app.route("/api/status", methods=["GET"])
+@app.route("/status", methods=["GET"])
 @app.route("/api/index/api/status", methods=["GET"])
 def status():
     return jsonify({
