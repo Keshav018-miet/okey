@@ -97,11 +97,14 @@ refusal_counter = 42  # Starts at 42 out of pure spite
 
 
 @app.route("/")
+@app.route("/api/index")
+@app.route("/api/index/")
 def index():
     return render_template("index.html")
 
 
 @app.route("/api/chat", methods=["POST"])
+@app.route("/api/index/api/chat", methods=["POST"])
 def chat():
     global refusal_counter
     data = request.get_json(force=True) if request.is_json else request.form
@@ -157,6 +160,7 @@ def chat():
 
 
 @app.route("/api/status", methods=["GET"])
+@app.route("/api/index/api/status", methods=["GET"])
 def status():
     return jsonify({
         "status": "Online, regretfully",
