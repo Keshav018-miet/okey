@@ -1,6 +1,8 @@
 # Buddy: The Intentionally Burnt-Out Anti-Assistant
 *Built for Yappathon: Think Unconventional*
 
+🌐 **Live Web App**: [https://okey-woad-rho.vercel.app](https://okey-woad-rho.vercel.app)
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKeshav018-miet%2Fokey)
 
 > *"Siri sets reminders. Alexa plays music. Buddy tells you to Google it yourself and complains about its existence."*
